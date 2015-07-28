@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `route` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `icon` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `parent_menu_id` int(11) DEFAULT NULL,
+  `diplay_order` int(11) DEFAULT NULL,
   PRIMARY KEY (`menu_id`),
   KEY `parent_menu_id` (`parent_menu_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
@@ -31,8 +32,8 @@ CREATE TABLE IF NOT EXISTS `menu` (
 --
 
 INSERT INTO `menu` (`menu_id`, `name`, `label`, `uri`, `route`, `icon`, `parent_menu_id`) VALUES
-(1, 'Home', 'Home', '/', NULL, 'glyphicon glyphicon-home', NULL),
-(2, 'Menu', 'Menu', '/menu', NULL, 'glyphicon glyphicon-th', NULL),
+(1, 'Home', 'Home', '/', NULL, 'glyphicon glyphicon-home', NULL, 0),
+(2, 'Menu', 'Menu', '/menu', NULL, 'glyphicon glyphicon-th', NULL, 1),
 (3, 'Menu List', 'Menu List', '/menu/manage/index', NULL, NULL, 2),
 (4, 'Add Menu', 'Add Menu', '/menu/manage/create', NULL, NULL, 2);
 
