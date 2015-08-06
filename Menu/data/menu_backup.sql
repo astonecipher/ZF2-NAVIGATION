@@ -31,11 +31,11 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`menu_id`, `name`, `label`, `uri`, `route`, `icon`, `parent_menu_id`) VALUES
-(1, 'Home', 'Home', '/', NULL, 'glyphicon glyphicon-home', NULL, 0),
-(2, 'Menu', 'Menu', '/menu', NULL, 'glyphicon glyphicon-th', NULL, 1),
-(3, 'Menu List', 'Menu List', '/menu/manage/index', NULL, NULL, 2),
-(4, 'Add Menu', 'Add Menu', '/menu/manage/create', NULL, NULL, 2);
+INSERT INTO `menu` (`menu_id`, `name`, `label`, `uri`, `route`, `icon`, `parent_menu_id`, `display_order`) VALUES
+(1, 'Home', 'Home', '/', NULL, 'glyphicon glyphicon-home', NULL, 0, 0),
+(2, 'Menu', 'Menu', '/menu', NULL, 'glyphicon glyphicon-th', NULL, 1, 1),
+(3, 'Menu List', 'Menu List', '/menu/manage/index', NULL, NULL, 2, NULL),
+(4, 'Add Menu', 'Add Menu', '/menu/manage/create', NULL, NULL, 2, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
